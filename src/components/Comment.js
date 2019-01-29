@@ -1,12 +1,17 @@
-import React, { Component } from 'react';
-export default class Comment extends Component {
-    render() {
-        return (
-            <li>
-                <h4>{this.props.author}</h4>
-                <p>{this.props.message}</p>
-                <button type="button" onClick={this.props.onDelete} > hapus</button>
-            </li>
-        )
-    }
+import React from 'react';
+import { Button } from 'reactstrap'
+const Comment = (props) => {
+    return (
+        <li>
+            <h4>{props.author}</h4>
+            <p>{props.message}</p>
+            <Button color='danger' type="button" onClick={props.onDelete} > hapus</Button>{' '}
+        </li>
+    )
+
+
+
 }
+
+
+export default Comment;

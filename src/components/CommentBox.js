@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import CommentList from './CommentList';
 import CommentForm from './CommentForm';
+
 export default class CommentBox extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            data: [{ author: "difa", message: "berhasil nih" }]
+            data: [{ author: "masfud difa", message: "berhasil menjadi seorang programer" }]
         }
         this.postComment = this.postComment.bind(this);
         this.deleteComment = this.deleteComment.bind(this);
@@ -27,11 +28,12 @@ export default class CommentBox extends Component {
 
     render() {
         return (
-            <div style={{ padding: "4px", margin: "4px", border: "2px solid grey" }}>
-                <h1> Komentar RUBICAMP</h1>
-                <CommentList comments={this.state.data} deleteComment={this.deleteComment} />
-                <CommentForm postComment={this.postComment} />
-
+            <div class='container'>
+                <div className='App' style={{ padding: "5px", margin: "10px", border: "2px solid blue" }}>
+                    <h1> Komentar RUBICAMP</h1>
+                    <CommentList comments={this.state.data} deleteComment={this.deleteComment} />
+                    <CommentForm postComment={this.postComment} />
+                </div>
             </div>
         )
     }

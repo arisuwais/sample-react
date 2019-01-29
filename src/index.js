@@ -4,6 +4,9 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import CommentBox from './components/CommentBox';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+
 
 ReactDOM.render(<CommentBox />, document.getElementById('root'));
 

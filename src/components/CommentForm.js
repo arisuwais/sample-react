@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Button } from 'reactstrap';
 export default class CommentForm extends Component {
     constructor(props) {
         super(props)
@@ -32,7 +33,8 @@ export default class CommentForm extends Component {
                 <br /> <br />
                 <textarea name="message" rows="8" cols="80" onChange={this.handleMessageChange} value={this.state.message}>
                 </textarea>
-                <button type="submit">Kirim</button>
+                <br />
+                < Button color="primary" type="submit">Kirim</Button>{' '}
             </form>
         )
     }
